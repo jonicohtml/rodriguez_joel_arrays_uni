@@ -21,16 +21,18 @@ La función debe realizar las siguientes acciones:
 Reemplazar todas las apariciones de nombre_antiguo en lista_nombres por nombre_nuevo.
 Retornar la cantidad total de reemplazos realizados.
 
-Crear una función que reciba como parámetros dos arrays. La función deberá mostrar la intersección de los dos arrays.
+9 - Crear una función que reciba como parámetros dos arrays. La función deberá mostrar la intersección de los dos arrays.
 
-Crear una función que reciba como parámetros dos arrays. La función deberá mostrar la unión de los dos arrays.
+10 - Crear una función que reciba como parámetros dos arrays. La función deberá mostrar la unión de los dos arrays.
 
-Crear una función que reciba como parámetros dos arrays. La función deberá mostrar la diferencia de los dos arrays.
+11 - Crear una función que reciba como parámetros dos arrays. La función deberá mostrar la diferencia de los dos arrays.
 '''
 
 '''
 1 - Desarrollar una función que permita crear un array de números con la cantidad de elementos que establezca el parámetro recibido.
 '''
+
+lista = [256, 55, 256, 66, 256]
 
 def crear_array(cantidad_elementos):
     for i in range(1, cantidad_elementos + 1):
@@ -46,8 +48,6 @@ def ingresar_numero_array(cantidad_elemetos):
 
 '''
 3 - Escribir una función que reciba una lista de enteros, la misma calculará y devolverá el promedio de todos los números. '''
-
-lista = [34, 55, 23, 66, 256]
 
 
 def promediar_numeros(lista: list) -> float:
@@ -94,8 +94,6 @@ def calcular_producto(lista: list) -> int:
         
     return acumulador_producto
 
-print(calcular_producto(lista))
-
 '''
 6 - Escribir una función que reciba como parámetros una lista de enteros y retorne la posición del valor máximo encontrado.
 '''
@@ -113,5 +111,36 @@ def encontrar_valor_maximo(lista: list) -> int:
 
 '''
 7 - Escribir una función que reciba como parámetros una lista de enteros y muestre la/las posiciones en donde se encuentra el valor máximo hallado.
+'''
+
+'''
+8 - Implementar una función llamada reemplazar_nombres que reciba los siguientes parámetros:
+a - Una lista de nombres (lista_nombres).
+b - Un nombre a buscar en la lista (nombre_antiguo).
+c - Un nombre de reemplazo (nombre_nuevo).
+
+La función debe realizar las siguientes acciones:
+Reemplazar todas las apariciones de nombre_antiguo en lista_nombres por nombre_nuevo.
+Retornar la cantidad total de reemplazos realizados.
+'''
+nombres = ["jorge", "andres", "ruben", "andres", "jorge", "paula", "eliseo", "alejandra", "atilio", "juan", "andres"]
+
+def reemplazar_nombres(lista_nombres: list, nombre_antiguo: str, nombre_nuevo: str) -> int:
+    
+    cantidad_reemplazos = 0
+    
+    for i in range(len(lista_nombres)):
+        if nombre_antiguo == lista_nombres[i]:
+            lista_nombres[i] = nombre_nuevo
+            cantidad_reemplazos += 1
+            
+        print(lista_nombres[i])
+
+    return f"La cantidad de reemplazos hechos es: {cantidad_reemplazos}"
+
+print(reemplazar_nombres(nombres, "andres", "paparulo"))
+
+'''
+9 - Crear una función que reciba como parámetros dos arrays. La función deberá mostrar la intersección de los dos arrays.
 '''
 
