@@ -144,3 +144,14 @@ print(reemplazar_nombres(nombres, "andres", "paparulo"))
 9 - Crear una función que reciba como parámetros dos arrays. La función deberá mostrar la intersección de los dos arrays.
 '''
 
+lista_conjunto_m = ["a","b","c"]
+lista_conjunto_n = ["g", "b", "l", "e"]
+
+lista = 
+def hallar_interseccion(lista_a: list, lista_b: list) -> None:
+    
+    
+    for i in range(len(lista_conjunto_m)):
+        for j in range(len(lista_conjunto_n)):
+            if lista_conjunto_m[i] == lista_conjunto_n[j]:
+                pass
